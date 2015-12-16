@@ -1,0 +1,135 @@
+
+#navbar.navbar {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    min-width: 200px;
+    border: none;
+
+    font-family: "Roboto Condensed";
+
+    * {
+        transition-duration: 150ms;
+        transition-timing-function: ease-in-out;
+
+        transition: font-size 0ms;
+    }
+
+    .navbar-brand {
+        // font-family: "Poiret One";
+
+        margin: 0;
+        padding: 0;
+        line-height: $navbar-height;
+        padding-right: 1rem;
+        transform-style: preserve-3d;
+
+        img, svg {
+            float: left;
+            padding: 4px 1rem;
+            margin: 0;
+            vertical-align: middle;
+            max-height: 100%;
+            fill: #fff;
+        }
+
+        .navbar-brand-name {
+            display: inline-block;
+
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 110%;
+
+            white-space: pre;
+            text-align: center;
+
+            @media(min-width: $screen-xs) {
+                font-size: 2rem;
+                line-height: $navbar-height;
+                white-space: nowrap;
+            }
+
+            @media(min-width: $screen-md) {
+                font-size: 3rem;
+            }
+
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .navbar-nav a {
+        font-family: "Roboto Condensed";
+        font-size: 1.4rem;
+        line-height: 175%;
+        font-weight: 300;
+
+        padding-top: 0;
+        padding-bottom: 0;
+
+        transition-property: color, border-color;
+
+        @media(min-width: $screen-xs) {
+            font-size: 1.8rem;
+        }
+
+
+        .nav-icon {
+            display: inline-block;
+            width: 1.6em;
+            text-align: center;
+        }
+    }
+
+    .navbar-nav > li > a {
+        padding: 0 1rem;
+
+        @media(min-width: $grid-float-breakpoint) {
+            padding-top: 0;
+            padding-bottom: 0;
+            line-height: $navbar-height;
+        }
+        @media(min-width: $screen-sm) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .dropdown-menu > li > a {
+        @media(min-width: $grid-float-breakpoint) {
+            text-transform: none;
+        }
+    }
+
+    .navbar-toggle {
+        // color: rgba(#fff, .8);
+
+        transition-property: color, background-color;
+
+        font-weight: 300;
+        font-size: $navbar-height / 2;
+        line-height: $navbar-height;
+
+        padding: 0 .66em;
+        margin: 0;
+
+        color: #fff;
+
+        &:hover {
+            // color: rgba(#fff, 1);
+        }
+
+        i {
+            padding: 0;
+        }
+
+        span {
+            display: none;
+
+            @media(min-width: $screen-xs) {
+                display: inline;
+                padding-right: .25em
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+/node_modules
+!/node_modules/app
+/.env
+/data/remote
+/lnh.sublime-project
+/data/DataMedicareGov_20150701.mdb
+/data/DataMedicareGov_MetadataAllTabs_v07.xls
+/data/LNH.bak
+/data/mssql/ratings.csv
+/data/zip/5-digit Commercial.csv
+/data/backup.backup
+/lnh.sublime-workspace

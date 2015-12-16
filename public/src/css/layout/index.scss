@@ -1,0 +1,23 @@
+body {
+    height: 100%;
+    min-width: 240px;
+}
+
+
+footer {
+    margin: 4rem 0 0;
+    padding: 2rem 0 5rem;
+    min-height: 200px;
+    border-top: 1px solid $gray-light;
+}
+
+
+.adg-container {
+    text-align: center;
+    border: 1px dotted $gray-light;
+}
+
+
+@import "./containers";
+@import "./navbar";
+@import "./breadcrumbs";

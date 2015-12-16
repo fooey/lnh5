@@ -1,0 +1,113 @@
+{
+  "name": "localnursinghomes",
+  "version": "5.0.0",
+  "description": "",
+  "main": "./server.js",
+  "scripts": {
+    "remote-get": "SET NODE_PATH=./; && babel-node ./data/get.js",
+    "remote-import": "SET NODE_PATH=./; && SET NODE_PATH=./; && babel-node ./data/import.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "SET NODE_PATH=./; && babel-node ./server.js"
+  },
+  "author": "Jason Rushton",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.4.2",
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.23",
+    "better-npm-run": "0.0.5",
+    "classnames": "^2.2.0",
+    "compression": "^1.6.0",
+    "connect-livereload": "^0.5.3",
+    "dotenv": "^1.2.0",
+    "errorhandler": "^1.4.2",
+    "event-stream": "^3.3.2",
+    "express": "^4.13.3",
+    "express-react-views": "^0.9.0",
+    "fs-extra": "^0.24.0",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6",
+    "morgan": "^1.6.1",
+    "numeral": "^1.5.3",
+    "page": "^1.6.4",
+    "pg": "^4.4.3",
+    "pg-hstore": "^2.3.2",
+    "pg-native": "^1.8.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "request": "^2.65.0",
+    "serve-favicon": "^2.3.0",
+    "serve-static": "^1.10.0",
+    "titlecase": "^1.0.2"
+  },
+  "devDependencies": {
+    "aliasify": "^1.8.0",
+    "autoprefixer": "^6.0.3",
+    "babel": "^5.8.23",
+    "babelify": "^6.2.0",
+    "bootstrap-sass": "^3.3.5",
+    "bootswatch": "^3.3.5",
+    "browserify": "^11.2.0",
+    "browserify-shim": "^3.8.10",
+    "chalk": "^1.1.1",
+    "cssnano": "^3.3.1",
+    "event-stream": "^3.3.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.3.0",
+    "gulp-develop-server": "^0.4.3",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-util": "^3.0.6",
+    "lru-cache": "^2.6.5",
+    "node-sass": "^3.3.3",
+    "request": "^2.64.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
+  },
+  "aliasify": {
+    "aliases": {
+      "components": "./components",
+      "data": "./data",
+      "lib": "./lib"
+    }
+  },
+  "browserify-shim": {
+    "react": "global:React",
+    "Immutable": "global:Immutable",
+    "lodash": "global:_",
+    "async": "global:async",
+    "jQuery": "global:jQuery",
+    "moment": "global:moment",
+    "page": "global:page",
+    "numeral": "global:numeral"
+  },
+  "scripts": {
+    "start": "better-npm-run start",
+    "start:dev": "better-npm-run start:dev",
+    "start:prod": "better-npm-run start:prod"
+  },
+  "betterScripts": {
+    "start": {
+      "command": "gulp default"
+    },
+    "start:dev": {
+      "command": "node server.babel.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "start:prod": {
+      "command": "node server.babel.js",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

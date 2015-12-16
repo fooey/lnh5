@@ -1,0 +1,48 @@
+.fact-table {
+    min-width: 300px;
+
+    thead {
+        display: none;
+    }
+
+    > tbody {
+        > tr {
+            > td, > th {
+                display: block;
+                border: none;
+            }
+            > td {
+                padding-left: 10em;
+                &:before {
+                    content: attr(data-label)": ";
+                    display: block;
+                    text-align: left;
+                    float: left;
+                    width: 10em;
+                    margin-left: -10em;
+                }
+            }
+        }
+    }
+
+    @media(min-width: $screen-md) {
+        > thead {
+            display: table-header-group;
+        }
+        > tbody {
+            > tr {
+                > td, > th {
+                    display: table-cell;
+                    margin: 0;
+                    padding: 0;
+                    float: none;
+
+                    &:before {
+                        display: none;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}

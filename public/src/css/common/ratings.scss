@@ -1,0 +1,126 @@
+
+$rating-color-high: $brand-success;
+$rating-color-mid: $brand-warning;
+$rating-color-low: $brand-danger;
+
+
+.rating-null,
+.rating-null-pct, {
+    opacity: (1/3);
+}
+
+.rating-0,
+.rating-1,
+.rating-00,
+.rating-05,
+.rating-10,
+.rating-0-pct,
+.rating-00-pct,
+.rating-10-pct,
+.rating-20-pct, {
+    color: $rating-color-low;
+}
+
+.rating-15,
+.rating-30-pct, {
+    color: mix($rating-color-mid, $rating-color-low, 25%);
+}
+
+.rating-2,
+.rating-20,
+.rating-40-pct, {
+    color: mix($rating-color-mid, $rating-color-low, 50%);
+}
+
+.rating-25,
+.rating-50-pct, {
+    color: mix($rating-color-mid, $rating-color-low, 75%);
+}
+
+.rating-3,
+.rating-30,
+.rating-60-pct, {
+    color: $rating-color-mid;
+}
+
+.rating-35,
+.rating-70-pct, {
+    color: mix($rating-color-high, $rating-color-mid, 25%);
+}
+
+.rating-4,
+.rating-40,
+.rating-80-pct, {
+    color: mix($rating-color-high, $rating-color-mid, 50%);
+}
+
+.rating-45,
+.rating-90-pct, {
+    color: mix($rating-color-high, $rating-color-mid, 75%);
+}
+
+
+.rating-5,
+.rating-50,
+.rating-100-pct {
+    color: $rating-color-high;
+}
+
+
+
+.rating-bg-0,
+.rating-1-bg,
+.rating-00-bg,
+.rating-05-bg,
+.rating-10-bg,
+.rating-0-pct-bg,
+.rating-00-pct-bg,
+.rating-10-pct-bg,
+.rating-20-pct-bg, {
+    background-color: $rating-color-low;
+}
+
+.rating-15-bg,
+.rating-30-pct-bg, {
+    background-color: mix($rating-color-mid, $rating-color-low, 25%);
+}
+
+.rating-2-bg,
+.rating-20-bg,
+.rating-40-pct-bg, {
+    background-color: mix($rating-color-mid, $rating-color-low, 50%);
+}
+
+.rating-25-bg,
+.rating-50-pct-bg, {
+    background-color: mix($rating-color-mid, $rating-color-low, 75%);
+}
+
+.rating-3-bg,
+.rating-30-bg,
+.rating-60-pct-bg, {
+    background-color: $rating-color-mid;
+}
+
+.rating-35-bg,
+.rating-70-pct-bg, {
+    background-color: mix($rating-color-high, $rating-color-mid, 25%);
+}
+
+.rating-4-bg,
+.rating-40-bg,
+.rating-80-pct-bg, {
+    background-color: mix($rating-color-high, $rating-color-mid, 50%);
+}
+
+.rating-45-bg,
+.rating-90-pct-bg, {
+    background-color: mix($rating-color-high, $rating-color-mid, 75%);
+}
+
+
+.rating-5-bg,
+.rating-50-bg,
+.rating-100-pct-bg, {
+    background-color: $rating-color-high;
+}

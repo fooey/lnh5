@@ -1,0 +1,100 @@
+
+$nf-color: $btn-success-color;
+$nf-bg-color: desaturate($btn-success-bg, 10%);
+
+$nf-color-active: $btn-success-color;
+$nf-bg-color-active: $btn-success-bg;
+
+
+.nav-facility {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+
+    padding: 0;
+    margin: 0 0 2rem;
+    list-style: none;
+
+
+
+    @media (min-width: $screen-lg) {
+        flex-wrap: nowrap;
+    }
+
+
+    > li {
+        list-style: none;
+        padding: 1px;
+        margin: 0;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        min-width: 50%;
+
+        @media (min-width: $screen-md) {
+            min-width: 25%;
+            max-width: 50%;
+        }
+        @media (min-width: $screen-lg) {
+            min-width: 10%;
+        }
+
+
+        > a {
+            transition: all 200ms ease-in 50ms, background-color 250ms ease-in;
+            margin: 0;
+            padding: 0 .5em;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+
+            text-decoration: none;
+            font-size: 1.2rem;
+            line-height: 5rem;
+            height: 6rem;
+            text-align: center;
+
+
+            text-shadow: 0 0 .25em rgba(0, 0, 0, .2);
+            color: $btn-success-color;
+            background-color: $nf-bg-color;
+            opacity: .9;
+
+            &:hover {
+                @extend .nav-facility-a-active;
+            }
+
+            i {
+                font-size: 200%;
+                line-height: 5rem;
+                position: relative;
+                top: .3rem;
+
+                &.fa-caret-down {
+                    top: .5rem;
+                }
+            }
+        }
+
+        &.active {
+            flex-grow: 2;
+            min-width: 33%;
+
+            > a {
+                @extend .nav-facility-a-active;
+            }
+        }
+    }
+}
+
+.nav-facility-a-active {
+    font-size: 1.6rem;
+    color: $btn-success-color;
+    background-color: $nf-bg-color-active;
+    text-shadow: 1px 1px 3px rgba(#000, .2);
+    opacity: 1;
+}

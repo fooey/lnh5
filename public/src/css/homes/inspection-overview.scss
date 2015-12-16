@@ -1,0 +1,116 @@
+// .survey-summary-cell {
+//     font-size: 1rem;
+//     line-height: 1.4rem;
+
+//     .label {
+//         color: inherit;
+//         display: inline-block;
+//         width: 33%;
+//         text-align: left;
+//     }
+//     .detail {
+//         font-size: 1.1rem;
+//         display: inline-block;
+//         width: 67%;
+//         text-align: right;
+//     }
+// }
+
+$caretDown: '\f0d7';
+$caretUp: '\f0d8';
+
+.survey-results {
+
+    .panel-heading h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .survey-results-section {
+        & + .survey-results-section {
+            // margin-top: 8rem;
+        }
+    }
+
+    .survey-results-item {
+        padding: 2rem;
+
+        &:nth-child(odd) {
+            background-color: $gray-lighter;
+        }
+        + .survey-results-item {
+            // margin-top: 2rem;
+        }
+    }
+    .facility, .geo-aggregates {
+    }
+
+    .facility {
+        .geo-ranks {
+            margin-left: 1rem;
+            font-size: 1.4rem;
+            line-height: 140%;
+        }
+    }
+
+
+    .check-toggler {
+        display: none;
+
+        ~ label {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            > i:before {
+                content: $caretDown ;
+            }
+        }
+
+        ~ .check-toggled {
+            transition: all 200ms ease-in;
+            display: block;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        &:checked {
+            ~ label {
+                > i:before {
+                    content: $caretUp;
+                }
+            }
+            ~ .check-toggled {
+                transition: max-height 200ms ease-in;
+                max-height: 20em;
+            }
+        }
+    }
+}
+
+
+.survey-results > table {
+    .measure-label {
+        display: block;
+    }
+    .detail-expanders {
+        display: block;
+        .btn {
+            font-size: .9rem;
+            padding: .3em .6em;
+            line-height: 100%;
+            text-transform: none;
+            display: inline-block;
+        }
+        .btn + .btn {
+            margin-left: .5em;
+        }
+    }
+
+    .detail-toggle {
+        &:checked {
+            background-color: #f00;
+            ~ span {
+                border: 1px solid black;
+            }
+        }
+    }
+}

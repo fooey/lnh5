@@ -1,0 +1,107 @@
+
+.jumbo {
+    text-shadow: 0 0 .25em rgba(#000, .2);
+    background-color: $brand-info;
+    color: #fff;
+    border-top: 1px solid lighten($brand-primary, 10%);
+
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+
+    a {
+        color: #fff;
+    }
+
+    @media(min-width: $screen-xs) {
+        border-top: none;
+    }
+
+    font-weight: 300;
+
+    .stars {
+        font-size: 8vw;
+        @media(min-width: $screen-xs) {
+            font-size: 5vw;
+        }
+        color: #fff;
+    }
+
+
+    h1 {
+        margin: 0;
+        padding: 0 0 1vw 0;
+
+        font-weight: 300;
+        line-height: 110%;
+
+        font-size: $font-size-base * 1.5;
+
+        @media(min-width: $screen-xs) {
+            font-size: $font-size-base * 2;
+            font-size: 4vw;
+        }
+        @media(min-width: $screen-md) {
+            font-size: $font-size-base * 2.6;
+            font-size: 4vw;
+        }
+    }
+
+
+
+    address {
+        > span {
+            padding-left: 2.5em;
+
+            i {
+                margin-left: -1.4em;
+                width: 1.4em;
+            }
+
+            display: block;
+            @media(min-width: $screen-sm) {
+                display: inline-block;
+            }
+
+
+
+            font-family: $condensed-font-family;
+            font-size: $font-size-base * .8;
+            line-height: 110%;
+
+            @media(min-width: $screen-xs) {
+                font-size: $font-size-base * .9;
+            }
+            @media(min-width: $screen-sm) {
+                font-size: $font-size-base * 1;
+            }
+            @media(min-width: $screen-md) {
+                font-size: $font-size-base * 1.2;
+            }
+
+            & + span {
+                padding-top: .5rem;
+            }
+            @media(min-width: $screen-sm) {
+                & + span {
+                    padding-top: 0;
+                }
+            }
+        }
+
+        .address-part {
+            & + .address-part:before {
+                content: ", ";
+            }
+            &.zipcode:before {
+                content: " ";
+            }
+
+            @media(max-width: $screen-sm) {
+                &.city:before {
+                    content: "\000A";
+                    white-space: pre;
+                }
+            }
+        }
+    }
+}

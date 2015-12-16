@@ -1,0 +1,14 @@
+{
+  "env": {
+    "development": {
+      "stage": 0,
+      "loose": "all",
+      "sourceMaps": true
+    },
+    "production": {
+      "stage": 0,
+      "loose": "all",
+      "sourceMaps": true
+    }
+  }
+}

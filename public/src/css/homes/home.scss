@@ -1,0 +1,97 @@
+
+.content-home {
+    margin-top: 2rem;
+}
+
+
+.gas {
+}
+
+.ratings-overview {
+    box-sizing: border-box;
+
+    ul {
+    }
+
+    li {
+        display: inline-block;
+        padding: .1em;
+        width: 100%;
+
+        @media(min-width: $screen-xs) {
+            width: 50%;
+        }
+    }
+
+    .flex-abg-container {
+    }
+
+    .stars {
+        color: #fff;
+        display: inline-block;
+        padding: 4em 0;
+    }
+
+    figure {
+        padding: .5em;
+        text-align: center;
+
+        figcaption {
+            text-align: left;
+            font-size: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #000;
+        }
+    }
+
+    .fa {
+        font-size: 10vw;
+
+        @media(min-width: $screen-xs) {
+            font-size: 6vw;
+        }
+
+        @media(min-width: $screen-sm) {
+            font-size: 3vw;
+        }
+
+        @media(min-width: $screen-md) {
+            font-size: 2em;
+        }
+    }
+}
+
+
+ul.fact-list {
+    columns: 30rem auto;
+
+    li {
+        padding-bottom: 2rem;
+        line-height: 2rem;
+        break-inside: avoid;
+    }
+
+    .fact-label {
+        font-weight: bold;
+        display: block;
+        font-size: 1.2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:after {
+            content: ': ';
+        }
+    }
+
+    .fact-detail {
+        display: block;
+    }
+}
+
+.inspection-facts {
+    .survey-facts {
+    }
+}

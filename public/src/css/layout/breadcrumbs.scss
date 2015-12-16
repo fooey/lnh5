@@ -1,0 +1,43 @@
+
+.breadcrumb {
+    margin: 0;
+    border: none;
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: .5rem 1rem;
+
+    > li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        padding: .25em 0;
+
+        max-width: 15vw;
+        &.active {
+            max-width: 90vw;
+        }
+
+        @media(min-width: $screen-xs) {
+            max-width: 20vw;
+        }
+        @media(min-width: $screen-sm) {
+            max-width: 25vw;
+        }
+
+        & + li:before {
+            content: "";
+            padding: 0;
+        }
+
+        i.fa {
+            padding-right: .3em;
+            width: 1.5em;
+            text-align: center;
+        }
+
+        &.active a {
+            color: #000;
+        }
+    }
+}

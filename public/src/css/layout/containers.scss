@@ -1,0 +1,28 @@
+
+.container-wrapper {
+    padding: 2rem 0;
+
+    &.container-wrapper-alt {
+        background-color: $gray-lighter;
+    }
+
+    &.container-wrapper-primary {
+        background-color: $btn-primary-bg;
+    }
+
+    &.container-wrapper-info {
+        background-color: $btn-info-bg;
+    }
+
+    &.container-wrapper-success {
+        background-color: $btn-success-bg;
+    }
+
+    &.container-wrapper-warning {
+        background-color: $btn-warning-bg;
+    }
+
+    &.container-wrapper-danger {
+        background-color: $btn-danger-bg;
+    }
+}
